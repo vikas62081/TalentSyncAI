@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "properties": {
+    "isJobPosting": {
+      "type": "boolean",
+      "description": "Find whether text is regarding job posting requirements. Default: false"
+    },
+    "subject": {
+      "type": "string",
+      "description": "The subject or title of the job posting. Extract the main heading or summary of the job from the description."
+    },
+    "sourceType": {
+      "type": "string",
+      "description": "Indicates the source of the job posting. Default to 'GMAIL' if the source is not explicitly mentioned (e.g., GMAIL, LinkedIn, etc.)."
+    },
+    "sender": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "The email address of the sender. Extract it directly from the 'From' field in the email or job posting."
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the contact person. Look for the person name mentioned at start or end. If no name is provided, set this to null"
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the contact person mentioned at start or end and should be string without space in lower case. If no email is provided, set this to null."
+        },
+        "phone": {
+          "type": "string",
+          "description": "The phone number of the contact person mentioned at start or end. Look for numeric patterns or phrases like 'Call' or 'Contact' or 'from'. If phone is provided, set this to null."
+        },
+        "company": {
+          "type": "string",
+          "description": "The name of the company associated with the contact person mentioned at start or end. Look for references to the employer or organization in the description."
+        }
+      },
+      "required": ["name", "email", "phone", "company"]
+    },
+    "jobDetails": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the job position (e.g., Software Engineer, Data Analyst). Use explicit headings or key phrases like 'Position' or 'Role'."
+        },
+        "location": {
+          "type": "string",
+          "description": "The location of the job. Include city, state, or mention of 'remote' or 'onsite'. If not available, set to null."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of job (e.g., Contract, Full-time, Part-time). Extract this information only if explicitly mentioned in the job posting. Look for phrases like 'Job Type', 'Contract', or 'Work Duration'. Acceptable values include '', 'Contract', and 'Full-time'. If not mentioned, do not infer or add values; set this to null.",
+          "enum": ["Contract", "Full-time", ""]
+        },
+        "company": {
+          "type": "string",
+          "description": "The name of the company offering the job. Look for references to the hiring organization in the description.If not available, set to null."
+        },
+        "rate": {
+          "type": "string",
+          "description": "The hourly or annual rate for the position (e.g., $50/hour, $120,000/year) only if specified."
+        },
+        "jobDescription": {
+          "type": "string",
+          "description": "A summary of the job responsibilities, tasks, and expectations."
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A list of skills or technologies required for the job (e.g., Python, Java, Cloud Computing, AWS). Parse this into an array of strings."
+        },
+        "educationRequirements": {
+          "type": "string",
+          "description": "The minimum education requirements (e.g., Bachelor's degree, Master's degree). If not mentioned, set to null."
+        },
+        "additionalInfo": {
+          "type": "string",
+          "description": "Any extra information, such as special preferences, perks, or conditions. If none are provided, set this to null."
+        }
+      },
+      "required": [
+        "title",
+        "location",
+        "type",
+        "company",
+        "rate",
+        "jobDescription",
+        "skills",
+        "educationRequirements",
+        "additionalInfo"
+      ]
+    }
+  },
+  "required": [
+    "isJobPosting",
+    "subject",
+    "sourceType",
+    "sender",
+    "contact",
+    "jobDetails"
+  ]
+}
