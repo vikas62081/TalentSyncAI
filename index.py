@@ -1,5 +1,6 @@
 
 
+import json
 import os
 from services.job_service import JobService
 from services.resume_analyser import ResumeAnalyser
@@ -41,15 +42,16 @@ def main():
     job_description = read_txt_file(job_description_file)
     
     # Analyser 
-    #   ResumeAnalyser().analyze_resume_for_job(resume, job_description)
+    job_des=ResumeAnalyser().analyze_resume_for_job(resume, job_description)
+    print(json.dumps(job_des, indent=4))
 
     # Job insights 
     # job_service=JobService()
     # print(job_service.process_emails())
     
     # update resume 
-    resume_updater_service = ResumeUpdater()
-    print(resume_updater_service.update_resume_based_on_job_description(resume,job_description))
+    # resume_updater_service = ResumeUpdater()
+    # print(resume_updater_service.update_resume_based_on_job_description(resume,job_description))
     
     
       # job_description_service = JobDescriptionService(format_json_file_path="format.json")

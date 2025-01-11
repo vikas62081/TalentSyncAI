@@ -340,7 +340,7 @@ def generate_response(filter_doc, user_query):
     """
     context = f"Respond to the question based on given input. Input:{filter_doc}. Question:{user_query}"
     print(context)
-    response = chat(model="llama3.2", stream=True, messages=[
+    response = chat(model="llama3.1:8b", stream=True, messages=[
         {"role": "system", "content": "You are a helpful HR assistant. You should respond to user queries. based on user provided input."},
         {"role": "user", "content": context}
     ])

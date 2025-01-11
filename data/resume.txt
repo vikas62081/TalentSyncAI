@@ -1,10 +1,55 @@
-**Vikas Kumar**
+Vikas Kumar
+Frisco, Texas | +1 (913)-238-8038
+vikas62081@gmail.com | GitHub | LinkedIn | Portfolio
 
-**Dallas, Texas | +1 (913)-238-8038 | vikas62081@gmail.com | GitHub | LinkedIn**
+Summary
+Highly skilled Full-Stack Developer and Data Scientist with 5+ years of experience building scalable applications and deploying predictive models. Proficient in Python, Databricks, PySpark, React.js, FastAPI, Azure Cloud, Docker, C#, Java, and assembly language. Expertise in real-time data streaming, DS/ML pipeline development, and microservices architecture. Adept at optimizing workflows and improving application efficiency, resulting in a 30-40% performance boost across projects. Seeking to leverage technical expertise in driving innovation and delivering impactful solutions for software development in C, C++, or other selected languages.
 
+Professional Experience
+Intern                                     
+Walmart | May 2024 - present
+Engineered a Python-based service that ingests real-time product data from Kafka topics, applying NLP techniques to extract actionable insights on product descriptions, reviews, and competitive pricing.
+Designed and implemented predictive models to forecast product demand, optimal pricing strategies and inventory requirements, boosting revenue potential by 20%.
+Optimized data processing pipelines with Python and PySpark, reducing latency and ensuring seamless integration across business units.
+Automated data extraction workflows with Azure Cloud to collect and process pricing, competitor data, and market trends, improving data accuracy by 30% and scalability for large datasets.
+Deployed containerized microservices with Kubernetes, enabling rapid updates and efficient resource utilization.
 
-**Summary**
-Highly skilled Full-Stack Developer with 5+ years of experience in building scalable applications, deploying predictive models, and optimizing workflows. Proficient in React.js, Python, Spring Boot, Kafka, Docker, Kubernetes, Java, JavaScript libraries (e.g., jQuery), HTML, CSS, RESTful APIs, and SQL. Adept at extracting insights from data and delivering impactful solutions. Seeking to leverage technical expertise to drive innovation and deliver high-quality software.
+Graduate Assistant (GA)
+University of Central Missouri | May 2024 - Aug 2024
+Collaborated with Professor Dr. Xiaodong Yue to conduct advanced research in machine learning, artificial intelligence, and data analytics, developing novel methodologies and generating actionable insights that enhanced the field.
+Developed and optimized Python scripts for analyzing datasets exceeding 50GB gigabytes, resulting in a 25% improvement in research efficiency and significantly reducing processing times.
+Designed, prepared, and delivered course materials for graduate-level courses in machine learning and data science, enhancing student understanding of complex topics through clear and interactive content.
+Mentored and supported over 50 graduate students, organizing weekly office hours, personalized tutoring sessions, and technical workshops, improving student performance and fostering engagement.
+Presented key findings in departmental seminars, earning recognition for technical expertise and research contributions.
 
+Senior Software Engineer
+Yubi | March 2022 - December 2023
+Spearheaded the development and maintenance of full-stack applications with Python(FastAPI) and React.js, boosting platform efficiency by 30% and enhancing user experience through streamlined front-end development. Architected and implemented event-driven architecture with Apache Kafka.
+Streamlined containerization and orchestration using Docker and Kubernetes, reducing deployment setup time by 40% and improving scalability.
+Designed and deployed RESTful APIs,  reducing API response time by 40% and creating reusable, optimized front-end components with React.js.
 
-**Professional Experience**\n\n**Intern**, Thinklusive Inc.\n\n**Dec 2024 - Present**\n\n* Engineered a Java-based service ingesting real-time data from Kafka topics, utilizing NLP techniques to extract actionable insights\n\n* Designed predictive models to forecast emerging tech trends, geographic hiring hotspots, and salary projections, boosting decision-making accuracy by 35%\n\n* Collaborated with senior data engineers to automate data extraction workflows, enhancing accuracy by 30% and improving scalability\n\n\n**Graduate Assistant**, University of Central Missouri\n\n**May 2024 - Aug 2024**\n\n* Conducted advanced research in machine learning, artificial intelligence, and data analytics, developing novel methodologies and generating actionable insights\n\n* Developed and optimized Python scripts for analyzing datasets exceeding 50GB gigabytes, resulting in a 25% improvement in research efficiency\n\n\n**Senior Software Engineer**, Yubi\n\n**March 2022 - December 2023**\n\n* Spearheaded the development and maintenance of full-stack applications with Spring Boot, React.js, and Java, boosting platform efficiency by 30%\n\n* Architected and implemented event-driven architecture with Apache Kafka, ensuring high throughput and low latency\n\n* Streamlined containerization and orchestration using Docker and Kubernetes, reducing deployment setup time by 40%\n\n\n**Full Stack Developer**, Virtusa Corporation\n\n**June 2019 - March 2022**\n\n* Engineered highly responsive Single Page Applications (SPAs) using React.js, resulting in a 40% reduction in load times\n\n* Developed and optimized RESTful APIs using Node.js, Express.js, Java, and Spring Boot, enhancing data retrieval speed by 25%\n\n* Led CI/CD pipeline automation with GitHub Actions, ensuring seamless deployment and reducing downtime by 35%\n\n\n**Personal Projects**\n\n* **Student Connect**: Developed a scalable application for university students, using React.js (TypeScript), FastAPI, and MongoDB\n        + Improved usability by 20% for 50+ students\n        + Engineered key features including subject swaps, accommodation finder, an integrated mailing system, and a platform for discovering internship opportunities and new graduate openings\n\n* **Unity Funds**: Developed a mobile-friendly application with Flutter and Firebase, streamlining financial management for village festivals and reducing manual errors by 15%\n        + Integrated machine learning algorithms for expense prediction and budget optimization, leading to a 20% increase in financial oversight accuracy\n\n\n**Education**\n\n* **Master of Science in Data Science & Artificial Intelligence**, University of Central Missouri (2024 - 2025)\n        + Relevant Coursework: Machine Learning, Artificial Intelligence, Big Data Analytics\n* **Bachelor's Degree**, XYZ University (2018 - 2022)\n\n\n**Technical Skills**\n\n* Programming Languages: JavaScript, Python, Java\n* Frameworks & Libraries: React.js, Redux, Node.js, Express.js, Spring Boot, FastAPI, Flutter, Docker, Kubernetes\n* Databases: DBMS, MySQL, MongoDB, Firebase, Git\n* DevOps Tools: Docker, Git\n* Other Skills: RESTful APIs, DSA, Web Development, Kafka, Agile, Scrum
+Full Stack Developer
+Virtusa Corporation | June 2019 - August 2022
+Developed and optimized RESTful APIs using Node.js and Express.js, enhancing data retrieval speed by 25%, and implemented gRPC calls to optimize microservice communication and minimize latency.
+Led CI/CD pipeline automation with GitHub Actions, ensuring seamless deployment and reducing downtime by 35%, contributing to faster delivery of high-quality software.
+
+Personal Projects
+Student Connect | June 2024- Present
+Developed a scalable application for university students, using React.js (TypeScrip), FastAPI, and MongoDB, improving usability by 20% for 50+ students.
+Engineered key features including subject swaps, accommodation finder, an integrated mailing system, and a platform for discovering internship opportunities and new graduate openings, driving 20% feature adoption.
+
+Unity Funds | January 2024 - April 2024
+Developed a mobile-friendly application with Flutter, Python, FastAPI, and Redis, streamlining financial management for village festivals and reducing manual errors by 15%.
+Integrated machine learning algorithms for expense prediction and budget optimization, leading to a 20% increase in financial oversight accuracy and a 50% reduction in manual reporting time.
+
+Educations
+Master of Science in Data Science & Artificial Intelligence 
+University of Central Missouri | Kansas City, MO
+Relevant Coursework: Machine Learning, Artificial Intelligence, Big Data Analytics
+
+Technical Skills
+Programming Languages: Python, JavaScript, Java, C#, Java, assembly language
+Frameworks & Libraries: FastAPI, PySpark, React.js, Redux, Node.js, Express.js, Spring Boot, Flutter, Databricks
+Databases: Redis, MySQL, MongoDB, Firebase
+DevOps Tools: Docker, Git, Azure Cloud
+Other Skills: Real-time streaming, Restful apis, Kafka, gRPC, Agile, Scrum

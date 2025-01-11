@@ -1,21 +1,25 @@
 import json
+import os
 import ollama
 
 
+
 class LammaService:
-    def send_message_to_llama(self,model_name:str, sys_msg:str, user_msg:str, retries=3):
+    def __init__(self):
+        self.model_name=os.getenv("DEFAULT_MODEL","llama3.1:8b")
+    def send_message_to_llama(self, user_msg:str, retries=1):
         """Sends the message to the LLaMA model and handles retries."""
+        if self.model_name is None:
+            raise Exception("Modal name is not found.")
         for attempt in range(retries):
             try:
-                response = ollama.chat(
-                    model=model_name,
-                    messages=[
-                        {'role': 'system', 'content':sys_msg},
-                        {'role': 'user', 'content': user_msg}
-                    ],
+                response = ollama.generate(
+                    model=self.model_name,
+                    prompt=user_msg,
                     format="json",
                 )
-                return json.loads(response['message']['content'])
+                data=response["response"]
+                return json.loads(data)
             except json.JSONDecodeError:
                 print("Error: Unable to parse the response into JSON.")
             except Exception as e:
@@ -23,12 +27,12 @@ class LammaService:
             print(f"Retrying... ({attempt + 1}/{retries})")
         return None
     
-    def send_message_to_llamma_text(self,model_name:str,sys_msg:str,user_msg:str,retries=3):
+    def send_message_to_llamma_text(self,sys_msg:str,user_msg:str,retries=3):
         """Sends the message to the LLaMA model and handles retries."""
         for attempt in range(retries):
             try:
                 response = ollama.chat(
-                    model=model_name,
+                    model=self.model_name,
                     messages=[
                         {'role': 'system', 'content':sys_msg},
                         {'role': 'user', 'content': user_msg}

@@ -33,7 +33,7 @@ class GmailEmailFetcherService:
             imaplib.IMAP4_SSL: The IMAP connection object.
         """
         if email is None or password is None:
-            print("email and password required")
+            logger.error("email and password required")
             return None
         self.mail = imaplib.IMAP4_SSL(IMAP_SERVER)
         self.mail.login(email, password)

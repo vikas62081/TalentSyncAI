@@ -129,9 +129,8 @@ class JobService:
         Returns:
             dict: Structured JSON data extracted from the job description.
         """
-        model_name = "llama3.2"
         message = self.prepare_message(job_description)
-        return self.llama_service.send_message_to_llama(model_name, self.SYSTEM_MESSAGE, message)
+        return self.llama_service.send_message_to_llama(user_msg=message)
 
 
     def _extract_email_body(self, message):
