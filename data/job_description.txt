@@ -1,28 +1,42 @@
-Overview
+You Lead the Way. We’ve Got Your Back.
 
-We are seeking a full-time Software Engineer Intern - Non-Embedded in our Olathe, KS location. In this role, you will be responsible for learning and training to develop software for Garmin's communication and navigation products under supervision.
+With the right backing, people and businesses have the power to progress in incredible ways. When you join Team Amex, you become part of a global and diverse community of colleagues with an unwavering commitment to back our customers, communities and each other. Here, you’ll learn and grow as we help you create a career journey that’s unique and meaningful to you with benefits, programs, and flexibility that support you personally and professionally.
 
-Essential Functions
+At American Express, you’ll be recognized for your contributions, leadership, and impact—every colleague has the opportunity to share in the company’s success. Together, we’ll win as a team, striving to uphold our company values and powerful backing promise to provide the world’s best customer experience every day. And we’ll do it with the utmost integrity, and in an environment where everyone is seen, heard and feels like they belong.
 
-Learn to develop software using C, C++, C#, Java, assembly language, or other selected languages
-Learn to test software using debuggers, emulators, simulators, and logic analyzers
-Learn to perform software releases and software quality assurance activities
-Learn to perform maintenance activities for products already in production in addition to new product software design
+Join Team Amex and let's lead the way together.
 
+As part of our diverse tech team, you can architect, code and ship software that makes us an essential part of our customers’ digital lives. Here, you can work alongside talented engineers in an open, supportive, inclusive environment where your voice is valued, and you make your own decisions on what tech to use to solve challenging problems. American Express offers a range of opportunities to work with the latest technologies and encourages you to back the broader engineering community through open source. And because we understand the importance of keeping your skills fresh and relevant, we give you dedicated time to invest in your professional development. Find your place in technology on #TeamAmex.
 
-Basic Qualifications
+The Chief Technology Officer Organization’s vision is to raise the bar for technical excellence, talent, strategy, and standards across Technology. It also seeks to cultivate and foster technical innovation, as well as elevate and amplify the technical heartbeat of the organization.
 
-Completed coursework in Computer Science, Electrical Engineering, Computer Engineering, or a related field
-Excellent academics (cumulative GPA greater than or equal to 3.0 as a general rule)
-Must possess relevant experience and/or training in languages such as C, C++, C# or Java
-Must possess relevant experience and/or training in data structures or object oriented design methodology
+The Backend Engineer, American Express for Digital payments will be an individual contributor who may ensure optimal design/architecture of the web components that power our digital experiences which are crucial for our customers as we strive to be essential to their everyday lives. Continuing to drive innovation and delivery in digital channels is a key part of the strategy for continuing to delight customers. 
 
+Our Software Engineers not only understand how technology works, but how that technology intersects with the people who count on it every day. Today, innovative ideas, insight and new perspectives are at the core of how we create a more powerful, personal and fulfilling experience for all our customers. So, if you’re interested in a career creating breakthrough software and making an impact on an audience of millions, look no further.
 
-Desired Qualifications
+Responsibilities:
+    • Performs hands-on architecture, design, and development of systems 
+    • Finding opportunities for adopting new technologies
+    • Work with Staff Engineer to define solution requirements and technical implementation approach
+    • Drive both high-level and detailed technical designs and conduct design reviews as needed
+    • Actively participate in team and company-wide architecture and engineering discussions and forums
+    • Analyze, design, program, debug, and modify software for use in local, networked, cloud-based or Internet-related environments
+    • Responsible for health and quality of the code across the portfolio, including leadership over SCM, functional testing, and CI/CD tool integration
+ 
+Qualifications:
 
-Outstanding academics (cumulative GPA greater than or equal to 3.5)
-Previous work or internship experience in design, particularly for consumer products
-Previous experience with Python, Docker, Kubernetes or Cloud software is strongly preferred. 
+    • Preferably a BS or MS degree in computer science, computer engineering, or other technical subject area
+    • 3+ years of software development experience
+    • Ability to effectively interpret technical and business objectives and challenges and articulate solutions
+    • Willingness to learn new technologies and exploit them to their optimal potential
+    • Skilled in the delivery methodology used by the team(Agile, Scrum, AgileXP, Test-Driven Development, Waterfall, etc.) 
+    • Active engineering experience in a complex environment with ability to deal with ambiguous/under-defined problems
+    • Expertise in building fault-tolerant, scalable solutions and system design at a global enterprise scale 
+    • 3+ Years of experience with Java, Reactive Programming using RxJava, Vert.x
+    • 3+ Expertise with integrating RESTful, GraphQL APIs
+    • Experience working with database technologies including NoSQL DBs
+    • Experience with Kotlin programming language is a plus
+      • Past working experiences with other languages are a plus
 
+ 
 
-Garmin International is an equal opportunity employer. Qualified applicants will receive consideration for employment without regard to race, religion, color, national origin, citizenship, sex, sexual orientation, gender identity, veteran status, age or disability.

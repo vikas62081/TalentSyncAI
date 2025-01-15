@@ -33,30 +33,27 @@ class JobService:
             str: Formatted message for the LLaMA model.
         """
         return f"""
-        Extract the following structured JSON from the job description provided. Focus on precise and concise extraction based only on explicit information or clearly inferred insights from the content. Use the following format:
+        You are an expert in extracting structured information from unstructured text. Your task is to analyze the following job description and output the information in the following JSON structure:
 
         {{
             "name": "The name of the contact person. Look for the recruiter or hiring manager's name mentioned at the start or end.",
             "email": "The email address of the contact person.",
             "phone": "The phone number of the contact person. Look for numeric patterns or phrases like 'Call' or 'Contact'.",
             "company": "The name of the company associated with the contact person. Look for references to the employer or organization explicitly mentioned in the description.",
-            "title": "The title of the job position (e.g., Software Engineer, Data Analyst). Use explicit headings or key phrases like 'Position' or 'Role'.",
-            "location": "The location of the job. Include city, state, or mention of 'remote' or 'onsite'.",
+            "title": "Title of the job (e.g., Software Engineer, Data Analyst). Use explicit headings or key phrases like ``Position`` or ``Role``.",
+            "location": "The location of the job, format should like `city,state`.",
             "type": "The type of job (e.g., Contract, Full-time, Part-time). If the duration is mentioned, it typically indicates a contract position.",
             "client_company": "The client's or employer organization's name. Look for explicit references, which could differ from the contact person's company.",
             "rate": "The hourly or annual rate for the position (e.g., $50/hour, $120,000/year).",
-            "jobDescription": "A summary or detailed description of the job responsibilities, tasks, and expectations.",
+            "job_description": "A summary or detailed description of the job responsibilities, tasks, and expectations.",
             "skills": "A list of skills or technologies required for the job (e.g., Python, Java, Cloud Computing, AWS). Parse this into an array of strings.",
-            "educationRequirements": "The minimum education requirements (e.g., Bachelor's degree, Master's degree).",
-            "additionalInfo": "Any extra information, such as special preferences, perks, or conditions."
+            "primary_skill":"Primary Skill required for the job (e.g. Python, Java, Cloud Computing, AWS)"
+            "education_requirements": "The minimum education requirements (e.g., Bachelor's degree, Master's degree).",
+            "additional_info": "Any extra information, such as special preferences, perks, or conditions."
         }}
 
         **Guidelines**:
-        - If any field is missing from the job description, set its value to `null` or an empty array, as appropriate.
-        - Strictly adhere to the provided JSON structure.
-        - Validate the JSON structure for accuracy before returning.
-        - Ensure all extracted information is precise, concise, and matches explicitly stated content in the job description.
-        - Respond in strict JSON format without additional explanations or errors.
+        - If any field is missing from the job description, set its value to `null` or an empty array, as appropriate
 
         Job Description: {job_description}
         Respond using JSON.
@@ -130,7 +127,7 @@ class JobService:
             dict: Structured JSON data extracted from the job description.
         """
         message = self.prepare_message(job_description)
-        return self.llama_service.send_message_to_llama(user_msg=message)
+        return self.llama_service.send_message_to_llama_generate(user_msg=message)
 
 
     def _extract_email_body(self, message):
@@ -183,10 +180,11 @@ class JobService:
                 "type": extract_value("type","Contract"),
                 "company": extract_value("client_company"),
                 "rate": extract_value("rate"),
-                "jobDescription": extract_value("jobDescription"),
+                "jobDescription": extract_value("job_description"),
+                "primarySkill": extract_value("primary_skill"),
                 "skills": extract_value("skills", []),
-                "educationRequirements": extract_value("educationRequirements"),
-                "additionalInfo": extract_value("additionalInfo")
+                "educationRequirements": extract_value("education_requirements"),
+                "additionalInfo": extract_value("additional_info")
             },
             "rawContent": str(html_text),
             "date": str(email_data.get("date"))

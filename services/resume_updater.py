@@ -57,7 +57,7 @@ class ResumeUpdater:
         message = self.prepare_message(resume_chunk, job_description)
 
         # Send the message to the LammaService
-        response = self.llama_service.send_message_to_llamma_text(self.SYSTEM_MESSAGE, message)
+        response = self.llama_service.send_message_to_llama_text(self.SYSTEM_MESSAGE, message)
         return response
 
     def update_entire_resume(self, resume: str, job_description: str) -> str:
