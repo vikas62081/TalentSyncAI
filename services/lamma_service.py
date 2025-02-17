@@ -34,7 +34,7 @@ class LammaService:
         for attempt in range(retries):
             try:
                 response = ollama.chat(
-                    model=self.model_name,
+                    model="deepseek-r1:8b",
                     messages=[{"role":"system","content":sys_msg},
                               {"role":"user","content":user_msg}],
                     format=format,

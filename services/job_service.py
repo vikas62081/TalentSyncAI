@@ -10,6 +10,77 @@ from services.sanitize_job_service import SenitizeJobService
 import json
 from email.utils import parsedate_to_datetime
 
+format={
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Extract the name of the contact person if mentioned. Look for phrases like 'Contact', 'Recruiter', or 'Hiring Manager'."
+        },
+        "email": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address associated with the contact person or company, typically found near the contact section."
+        },
+        "phone": {
+            "type": "string",
+            "description": "The phone number of the contact person. Search for numeric patterns or terms like 'Call' or 'Contact'."
+        },
+        "company": {
+            "type": "string",
+            "description": "The organization explicitly mentioned as hiring. Focus on employer details."
+        },
+        "title": {
+            "type": "string",
+            "description": "Designation for the job, such as 'Software Engineer' or 'Data Analyst'. Look for key phrases like 'Position' or 'Role'."
+        },
+        "client_company": {
+            "type": "string",
+            "description": "If a staffing company is hiring on behalf of another client, extract the client company's name."
+        },
+        "rate": {
+            "type": "string",
+            "description": "The hourly or annual compensation (e.g., $50/hour or $120,000/year) if specified."
+        },
+        "job_description": {
+            "type": "string",
+            "description": "A summary of the responsibilities, tasks, and expectations explicitly listed."
+        },
+        "skills": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+           "description": "Extract and list all mentioned technologies, programming languages, frameworks, tools, or platforms required for the job (e.g., ['Python', 'AWS', 'JavaScript'])."
+        },
+        "primary_skill": {
+            "type": "string",
+            "description": "Identify and extract primary skill required for the job (e.g. Python, Java, Cloud Computing, AWS, Azure, React.js)"
+        },
+        "education_requirements": {
+            "type": "string",
+            "description": "The minimum education level (e.g., 'Bachelor's Degree', 'Master's Degree')."
+        },
+        "additional_info": {
+            "type": "string",
+            "description": "Any extra details like perks, work conditions, or preferences explicitly mentioned."
+        },
+        "location": {
+            "type": "string",
+            "description": "Extract and return the job location in 'City, State' format if it is a US-based position (e.g., 'San Francisco, CA'). If the job is remote, return 'Remote'. If no location is specified or if it is outside the US, return an empty string."
+        },
+        "city": {
+            "type": "string",
+            "description": "City name of the job location, it is a US-based position (e.g. 'San Francisco'). If multiple cities are mentioned, return only the first explicitly listed."
+        },
+        "state": {
+            "type": "string",
+            "description": "State code  of job location, it is a US-based position (e.g. 'NJ','TX','FL', 'AZ'), If multiple states are mentioned, return only the first explicitly listed."
+        }
+    },
+    "required": ["name", "email", "phone", "company", "title", "type", "job_description", "skills","primary_skill","location","city","state","additional_info","education_requirements"]
+}
+
 
 class JobService:
     """
@@ -47,7 +118,7 @@ class JobService:
             "rate": "The hourly or annual rate for the position (e.g., $50/hour, $120,000/year).",
             "job_description": "A summary or detailed description of the job responsibilities, tasks, and expectations.",
             "skills": "A list of skills or technologies required for the job (e.g., Python, Java, Cloud Computing, AWS). Parse this into an array of strings.",
-            "primary_skill":"Primary Skill required for the job (e.g. Python, Java, Cloud Computing, AWS)"
+            "primary_skill":"Primary Skill required for the job (e.g. Python, Java, Cloud Computing, AWS, Azure, React.js)"
             "education_requirements": "The minimum education requirements (e.g., Bachelor's degree, Master's degree).",
             "additional_info": "Any extra information, such as special preferences, perks, or conditions."
         }}

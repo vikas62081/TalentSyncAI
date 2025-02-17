@@ -3,6 +3,7 @@
 import json
 import os
 from services.audio_service import AudioService
+from services.audio_service2 import WhisperAudioTranscriber
 from services.job_service import JobService
 from services.resume_analyser import ResumeAnalyser
 from services.resume_updater import ResumeUpdater
@@ -40,7 +41,7 @@ def read_txt_file(file_path:str):
 def main():
     resume_file = "./data/resume.txt"
     job_description_file = "./data/job_description.txt"
-    audio_file = "./data/Note.mp3"
+    audio_path = "./data/ayyappa.mp3"
     resume = read_txt_file(resume_file)
     job_description = read_txt_file(job_description_file)
     
@@ -57,8 +58,19 @@ def main():
     # print(resume_updater_service.update_resume_based_on_job_description(resume,job_description))
     
     #Interview audio processor
-    audio_service=AudioService(audio_file)
+    audio_service=AudioService(audio_path)
     print(json.dumps(audio_service.process_audio(),indent=4))
+    # audio_service.a()
+    
+    # transcriber = WhisperAudioTranscriber(model_name="openai/whisper-base")
+    # transcription = transcriber.trans()
+    # Split the string into chunks of size `chunk_size`
+    
+    # chunks = [transcription[i:i+3000] for i in range(0, len(transcription), 3000)]
+    # print("Transcription:", len(chunks))
+    
+    # [print(audio_service.ai(chunk)) for chunk in chunks]
+   
     
     
     
